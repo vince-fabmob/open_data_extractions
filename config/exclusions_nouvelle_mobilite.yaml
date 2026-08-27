@@ -1,0 +1,9 @@
+exclusions:
+  - tadoussac
+  - maass
+  - contrat à exécution sur demande
+  - contrat a execution sur demande
+
+notes:
+  - Les exclusions servent à réduire les faux positifs.
+  - Toute sélection automatisée doit être vérifiée manuellement avant publication.

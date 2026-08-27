@@ -1,0 +1,50 @@
+transport_a_la_demande:
+  - transport à la demande
+  - transport a la demande
+  - transport collectif à la demande
+  - transport collectif a la demande
+  - microtransit
+  - navette à la demande
+  - navette a la demande
+
+taxi_collectif:
+  - taxi collectif
+  - taxi partagé
+  - taxi partage
+  - taxibus
+
+autopartage:
+  - autopartage
+  - auto-partage
+  - auto partage
+  - communauto
+  - carsharing
+  - véhicule partagé
+  - vehicule partage
+
+velopartage:
+  - vélopartage
+  - velopartage
+  - vélo libre-service
+  - velo libre-service
+  - bixi
+  - vélo partagé
+  - velo partage
+
+mobilite_integree:
+  - mobilité intégrée
+  - mobilite integree
+  - maas
+  - mobilité comme service
+  - mobilite comme service
+  - plateforme de mobilité
+  - plateforme de mobilite
+
+repartition_information:
+  - répartition
+  - repartition
+  - réservation de transport
+  - reservation de transport
+  - hastus on demand
+  - gtfs-rt
+  - information voyageurs

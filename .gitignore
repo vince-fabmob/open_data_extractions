@@ -1,0 +1,29 @@
+# Données locales et sorties volumineuses
+data/raw/*
+data/interim/*
+data/processed/*
+outputs/*
+
+# Préserver la structure des répertoires
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!outputs/.gitkeep
+
+# Environnements, cache et fichiers de notebook
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Configurations et secrets locaux
+.env
+*.pem
+*.key
+
+# Exports fréquents
+*.xlsx
+*.parquet
+*.zip
+*.gz
