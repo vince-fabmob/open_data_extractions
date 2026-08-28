@@ -1,0 +1,81 @@
+drones_explicites:
+  - drone
+  - drones
+  - uav
+  - uas
+  - rpas
+  - aeronef telepilote
+  - aeronef tele pilote
+  - aeronef sans pilote
+  - aeronefs telepilotes
+  - systeme aerien sans pilote
+  - systeme d aeronef telepilote
+  - remotely piloted aircraft
+  - unmanned aerial vehicle
+  - unmanned aircraft system
+  - inspection par drone
+  - inspection de drone
+  - releve par drone
+  - releve drone
+  - survol par drone
+  - imagerie par drone
+  - photogrammetrie par drone
+  - cartographie par drone
+  - drone lidar
+  - drone thermique
+
+objets_associes:
+  - toiture
+  - toit
+  - facade
+  - batiment
+  - immeuble
+  - pont
+  - viaduc
+  - tunnel
+  - ouvrage
+  - ouvrage d art
+  - infrastructure
+  - structure
+  - mur
+  - pylone
+  - antenne
+  - cheminee
+  - tour
+  - talus
+  - berge
+  - mur de soutenement
+
+methodes_associees:
+  - inspection
+  - inspection visuelle
+  - inspection technique
+  - inspection structurale
+  - inspection statutaire
+  - inspection preventive
+  - releve
+  - releve technique
+  - releve topographique
+  - releve aerien
+  - imagerie
+  - imagerie aerienne
+  - photogrammetrie
+  - orthophoto
+  - orthomosaïque
+  - orthomosaique
+  - thermographie
+  - thermique
+  - infrarouge
+  - lidar
+  - nuage de points
+  - scan 3d
+  - numerisation 3d
+  - modelisation 3d
+  - modele 3d
+  - cartographie
+  - arpentage
+
+notes:
+  - Le niveau 'Explicite' correspond aux contrats mentionnant directement drone/UAV/RPAS.
+  - Le niveau 'Compatible' correspond aux contrats mentionnant un objet et une methode compatibles avec un usage de drone, sans mention explicite; validation manuelle requise.
+  - Cette liste sert aussi de base pour l'analyse croisee entraves/signalisation/circulation et surveillance de chantier.
