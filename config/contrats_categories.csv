@@ -1,0 +1,19 @@
+categorie_id,axe,libelle
+MOB,thematique,Mobilité
+INFRA,thematique,Infrastructures et chantiers
+ENERGIE,thematique,Énergie
+ENV,thematique,Environnement
+NUM,thematique,Numérique et données
+BIEN,nature,Biens et équipements
+PRO,nature,Services professionnels
+LOG,nature,Logiciels et abonnements
+TRAVAUX,nature,Travaux
+LOCATION,nature,Location
+ENTRETIEN,nature,Entretien et réparation
+ETUDE,fonction,Étude et planification
+INSPECTION,fonction,Inspection et surveillance
+EVALUATION,fonction,Évaluation
+COMM,fonction,Communication
+MODIF,operation,Modification potentielle
+RECETTE,operation,Recette potentielle
+CADRE,operation,Entente-cadre
