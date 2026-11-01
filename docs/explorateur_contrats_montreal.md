@@ -5,6 +5,80 @@ Ouvrir notebooks/02_explorateur_contrats_montreal.ipynb dans Google Colab. Modif
 ## Recherche
 INCLURE et EXCLURE sont des listes d'expressions littérales. MODE vaut OU ou ET. La normalisation retire les accents et remplace la ponctuation par des espaces; ce n'est pas une recherche sémantique. CHAMP choisit un champ ou tous. SOURCES et SERVICES demandent les libellés exacts. CATEGORIE filtre un identifiant. Les bornes de dates et montants excluent les valeurs non reconnues. Les classifications portent uniquement sur la description, jamais sur le seul nom du fournisseur.
 
+### Ajouter plusieurs termes
+Modifier la première cellule de code. Séparer les éléments par des virgules, avec chaque élément entre guillemets, dans une liste entre crochets :
+
+```python
+INCLURE = ['vélo', 'cyclable', 'bicyclette']
+```
+
+Les guillemets simples ou doubles sont acceptés. Une expression de plusieurs mots reste dans une seule paire de guillemets :
+
+```python
+INCLURE = ['transport collectif', 'autobus', 'navette autonome']
+```
+
+Ne pas écrire `INCLURE = ['vélo, cyclable, bicyclette']` : il s'agit alors d'un seul élément, pas de trois termes.
+
+### Choisir OU ou ET
+Pour retenir au moins un terme :
+
+```python
+INCLURE = ['vélo', 'cyclable', 'bicyclette']
+EXCLURE = []
+MODE = 'OU'
+CHAMP = 'description'
+```
+
+Pour exiger tous les termes dans la description, même éloignés ou dans un ordre différent :
+
+```python
+INCLURE = ['surveillance', 'chantier']
+EXCLURE = []
+MODE = 'ET'
+CHAMP = 'description'
+```
+
+À distinguer de `INCLURE = ['surveillance de chantier']`, qui recherche cette suite de mots après normalisation. Un espace dans une expression n'est pas un opérateur ET.
+
+### Exclure des termes
+
+```python
+INCLURE = ['surveillance', 'chantier']
+EXCLURE = ['caméra', 'gardiennage']
+MODE = 'ET'
+CHAMP = 'description'
+```
+
+Les deux termes inclus sont requis; la présence d'au moins un terme exclu écarte l'enregistrement. `EXCLURE = []` désactive les exclusions. Avec `INCLURE = []` et `EXCLURE = []`, seuls les autres filtres s'appliquent; l'export peut être volumineux. Utiliser des éléments non vides contenant des lettres ou des chiffres, pas uniquement de la ponctuation.
+
+### Choisir le champ
+
+| CHAMP | Contenu recherché |
+|---|---|
+| 'tous' | Fournisseur, description, décision, dossier et numéro source |
+| 'description' | Objet ou description |
+| 'fournisseur' | Nom du fournisseur |
+| 'decision' | Numéro de décision |
+| 'dossier' | Numéro de dossier |
+| 'numero_source' | Numéro source lorsqu'il est disponible |
+
+`tous` n'inclut pas service, direction ni activité. Avec `tous` et `ET`, les termes peuvent être dans différents champs d'un même enregistrement.
+
+Exemple pour un fournisseur :
+
+```python
+INCLURE = ['Transdev']
+EXCLURE = []
+MODE = 'OU'
+CHAMP = 'fournisseur'
+```
+
+### Comprendre les correspondances et relancer
+La recherche ignore les majuscules et les accents; la ponctuation est remplacée par des espaces. Elle cherche des portions de texte : `cyclable` peut correspondre à `cyclables`. Elle ne trouve pas automatiquement les synonymes et ne corrige pas les fautes. Les expressions sont littérales, pas des expressions régulières. Une même liste ne permet pas les combinaisons imbriquées telles que `(vélo OU bicyclette) ET entretien` : faire plusieurs recherches ou adapter le code.
+
+Après modification, sélectionner Exécution → Tout exécuter pour recalculer résultats et exports. Modifier seulement les paramètres utiles; conserver `MODE = 'OU'` ou `MODE = 'ET'` en majuscules et un nom de champ figurant dans le tableau.
+
 ## Règles
 config/contrats_categories.csv définit les axes et libellés. config/contrats_regles.csv contient une expression obligatoire, un terme requis facultatif et une exclusion facultative par règle. Plusieurs règles peuvent attribuer la même catégorie; les preuves sont conservées. Une catégorie vide signifie non classé, pas absence du thème. Le dictionnaire initial est volontairement limité. Les classifications sont des propositions non validées.
 
