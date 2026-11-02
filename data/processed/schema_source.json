@@ -1,0 +1,61 @@
+{
+  "id": "6dvr-xwnh",
+  "name": "Transportation Network Providers - Trips (2025-)",
+  "columns": [
+    {
+      "fieldName": "trip_id",
+      "description": "A unique identifier for the trip.",
+      "dataTypeName": "text"
+    },
+    {
+      "fieldName": "trip_start_timestamp",
+      "description": "When the trip started, rounded to the nearest 15 minutes.",
+      "dataTypeName": "calendar_date"
+    },
+    {
+      "fieldName": "trip_seconds",
+      "description": "Time of the trip in seconds.",
+      "dataTypeName": "number"
+    },
+    {
+      "fieldName": "trip_miles",
+      "description": "Distance of the trip in miles.",
+      "dataTypeName": "number"
+    },
+    {
+      "fieldName": "pickup_community_area",
+      "description": "The Community Area where the trip began. This column will be blank for locations outside Chicago.",
+      "dataTypeName": "number"
+    },
+    {
+      "fieldName": "dropoff_community_area",
+      "description": "The Community Area where the trip ended. This column will be blank for locations outside Chicago.",
+      "dataTypeName": "number"
+    },
+    {
+      "fieldName": "fare",
+      "description": "The fare for the trip, rounded to the nearest $2.50.",
+      "dataTypeName": "number"
+    },
+    {
+      "fieldName": "trip_total",
+      "description": "Total cost of the trip. This is calculated as the total of the previous columns, including rounding.",
+      "dataTypeName": "number"
+    },
+    {
+      "fieldName": "shared_trip_authorized",
+      "description": "Whether the customer agreed to a shared trip with another customer, regardless of whether the customer was actually matched for a shared trip.",
+      "dataTypeName": "checkbox"
+    },
+    {
+      "fieldName": "shared_trip_match",
+      "description": "Whether the customer was actually matched to a shared trip.",
+      "dataTypeName": "checkbox"
+    },
+    {
+      "fieldName": "trips_pooled",
+      "description": "If customers were matched for a shared trip, how many trips, including this one, were pooled. All customer trips from the time the vehicle was empty until it was empty again contribute to this count, even if some customers were never present in the vehicle at the same time. Each trip making up the overall shared trip will have a separate record in this dataset, with the same value in this column.",
+      "dataTypeName": "number"
+    }
+  ]
+}

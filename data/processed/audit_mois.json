@@ -1,0 +1,12 @@
+[
+  {
+    "mois": "2025-01",
+    "complet": true,
+    "lignes_lues": 7607290,
+    "N_API_avant": 7607290,
+    "N_API_apres": 7607290,
+    "rowsUpdatedAt": 1793131763,
+    "empreinte_csv_sha256": "195348dd1548ef1467fcc9adb4f76a5c835c910dc9e2abd4ba371ff5785fe284",
+    "dernier_trip_id": "ffffffd8c4ab06b0c6986b3be4341c825d9834af"
+  }
+]
